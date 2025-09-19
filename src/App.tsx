@@ -17,72 +17,123 @@ import {
   Brain,
   Target,
   Shield,
-  Rocket
+  Rocket,
+  Calculator,
+  FileText,
+  ShoppingCart,
+  Headphones,
+  Truck,
+  UserCheck,
+  Scale,
+  Server,
+  PieChart,
+  Building2,
+  Utensils
 } from 'lucide-react';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const automationCapabilities = [
+  const solutions = [
     {
-      icon: MessageCircle,
-      title: "Support Management",
-      description: "24/7 customer support with intelligent ticket routing, automated responses, and escalation management"
+      icon: Calculator,
+      title: "Finance & Accounting",
+      description: "Automate invoices, expenses, and reporting."
     },
     {
       icon: TrendingUp,
-      title: "Forecasting & Analytics",
-      description: "Predictive analytics, trend analysis, and automated reporting that outperforms traditional analysts"
-    },
-    {
-      icon: BarChart3,
-      title: "Data Intelligence",
-      description: "Real-time data processing, insight generation, and automated decision-making systems"
-    },
-    {
-      icon: Users,
-      title: "Team Coordination",
-      description: "Automated project management, resource allocation, and performance monitoring"
+      title: "Sales",
+      description: "Lead scoring, outreach, and proposals."
     },
     {
       icon: Target,
-      title: "Sales Operations",
-      description: "Lead qualification, pipeline management, and automated follow-up sequences"
+      title: "Marketing",
+      description: "Social posts, SEO content, and ad insights."
     },
     {
-      icon: Brain,
-      title: "Strategic Planning",
-      description: "Market analysis, competitive intelligence, and automated strategy recommendations"
+      icon: Headphones,
+      title: "Customer Service",
+      description: "24/7 WhatsApp bots, ticket routing, voice support."
+    },
+    {
+      icon: Truck,
+      title: "Logistics & Operations",
+      description: "Order syncing, delivery updates, route planning."
+    },
+    {
+      icon: UserCheck,
+      title: "HR & Admin",
+      description: "CV screening, onboarding, scheduling, meeting summaries."
+    },
+    {
+      icon: Scale,
+      title: "Legal & Compliance",
+      description: "Contract review, compliance alerts, translations."
+    },
+    {
+      icon: Server,
+      title: "IT & Infrastructure",
+      description: "Monitoring, security alerts, DevOps automation."
     }
   ];
 
-  const benefits = [
-    { text: "Reduce operational costs by up to 80%" },
-    { text: "24/7 availability without breaks or sick days" },
-    { text: "Consistent performance and zero human error" },
-    { text: "Instant scalability during peak periods" },
-    { text: "Complete audit trail and compliance reporting" },
-    { text: "Continuous learning and improvement" }
+  const proofPoints = [
+    {
+      icon: ShoppingCart,
+      industry: "Retail",
+      result: "Cut order processing by 70%"
+    },
+    {
+      icon: Building2,
+      industry: "Agencies",
+      result: "Saved 25 hours/week on admin"
+    },
+    {
+      icon: Utensils,
+      industry: "Restaurants",
+      result: "Reduced missed bookings by 90%"
+    }
   ];
 
-  const testimonials = [
+  const pricingPlans = [
     {
-      name: "Sarah Chen",
-      role: "CEO, TechFlow Inc",
-      content: "We replaced our entire support team with this AI solution. Response times improved 10x and customer satisfaction is at an all-time high.",
-      rating: 5
+      name: "Starter",
+      price: "from $500",
+      period: "/month",
+      description: "1–2 automations, single system setup",
+      features: [
+        "1-2 automation workflows",
+        "Single system integration",
+        "Basic setup & training",
+        "Email support"
+      ]
     },
     {
-      name: "Marcus Rodriguez", 
-      role: "CFO, GrowthLabs",
-      content: "The forecasting accuracy is incredible. Our AI analyst consistently outperforms what our human team could deliver.",
-      rating: 5
+      name: "Pro",
+      price: "from $1,500",
+      period: "/month",
+      description: "3–5 automations, multi-system integration, ongoing support",
+      features: [
+        "3-5 automation workflows",
+        "Multi-system integration",
+        "Advanced workflow design",
+        "Priority support",
+        "Monthly optimization calls"
+      ],
+      popular: true
     },
     {
-      name: "Jennifer Park",
-      role: "COO, StreamlineHQ", 
-      content: "Complete game-changer. We've automated 90% of our operations and can focus on strategic growth instead of day-to-day management.",
-      rating: 5
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "Unlimited workflows, cross-department automation, dedicated support",
+      features: [
+        "Unlimited automation workflows",
+        "Cross-department integration",
+        "Dedicated account manager",
+        "24/7 priority support",
+        "Custom development"
+      ]
     }
   ];
 
@@ -98,10 +149,10 @@ function App() {
             </div>
             
             <nav className="hidden md:flex space-x-8">
-              <a href="#features" className="text-slate-300 hover:text-white transition-colors">Features</a>
-              <a href="#benefits" className="text-slate-300 hover:text-white transition-colors">Benefits</a>
-              <a href="#testimonials" className="text-slate-300 hover:text-white transition-colors">Reviews</a>
+              <a href="#solutions" className="text-slate-300 hover:text-white transition-colors">Solutions</a>
+              <a href="#roi" className="text-slate-300 hover:text-white transition-colors">ROI</a>
               <a href="#pricing" className="text-slate-300 hover:text-white transition-colors">Pricing</a>
+              <a href="#audit" className="text-slate-300 hover:text-white transition-colors">Audit</a>
             </nav>
 
             <button
@@ -116,10 +167,10 @@ function App() {
           {mobileMenuOpen && (
             <div className="md:hidden absolute top-16 left-0 right-0 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800/50">
               <nav className="px-4 py-4 space-y-3">
-                <a href="#features" className="block text-slate-300 hover:text-white transition-colors">Features</a>
-                <a href="#benefits" className="block text-slate-300 hover:text-white transition-colors">Benefits</a>
-                <a href="#testimonials" className="block text-slate-300 hover:text-white transition-colors">Reviews</a>
+                <a href="#solutions" className="block text-slate-300 hover:text-white transition-colors">Solutions</a>
+                <a href="#roi" className="block text-slate-300 hover:text-white transition-colors">ROI</a>
                 <a href="#pricing" className="block text-slate-300 hover:text-white transition-colors">Pricing</a>
+                <a href="#audit" className="block text-slate-300 hover:text-white transition-colors">Audit</a>
               </nav>
             </div>
           )}
@@ -131,47 +182,47 @@ function App() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-8">
             <Sparkles className="h-4 w-4 text-blue-400" />
-            <span className="text-blue-400 text-sm font-medium">Revolutionary AI Workforce</span>
+            <span className="text-blue-400 text-sm font-medium">AI-Powered Business Automation</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Replace Your Entire
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Team</span>
+            Automate Workflows.
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Empower Your Team.</span>
             <br />
-            With AI Automation
+            Scale Faster.
           </h1>
           
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Why hire support managers, analysts, and forecasters when one AI solution can outperform them all? 
-            Automate every role, eliminate human error, and scale infinitely.
+            Save up to 80% of your time and costs by letting AI handle repetitive work. 
+            Reduce errors, run 24/7, and grow your business without adding overhead.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center space-x-2">
-              <Rocket className="h-5 w-5" />
-              <span>Start Automating Today</span>
+              <Shield className="h-5 w-5" />
+              <span>Book Your Automation Audit – $199</span>
             </button>
             <button className="border-2 border-slate-600 hover:border-slate-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-slate-800/50">
-              Watch Demo
+              See Example Automations
             </button>
           </div>
 
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-1">80%</div>
-              <div className="text-slate-400">Cost Reduction</div>
+              <div className="text-slate-400">Time Saved</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-1">24/7</div>
-              <div className="text-slate-400">Availability</div>
+              <div className="text-slate-400">Operations</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-1">10x</div>
-              <div className="text-slate-400">Faster Response</div>
+              <div className="text-3xl font-bold text-white mb-1">90%</div>
+              <div className="text-slate-400">Fewer Errors</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-1">0%</div>
-              <div className="text-slate-400">Human Error</div>
+              <div className="text-slate-400">Extra Overhead</div>
             </div>
           </div>
         </div>
@@ -182,60 +233,52 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Tired of Managing People Instead of Growth?
+              Stop Wasting Time on Manual Work
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Every day you spend managing human teams is a day not spent scaling your business. 
-              Human limitations are holding you back.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-8 text-center">
-              <Clock className="h-12 w-12 text-red-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Human Limitations</h3>
-              <p className="text-slate-300">8-hour workdays, sick leaves, vacations, and inconsistent performance</p>
-            </div>
             <div className="bg-orange-500/10 border border-orange-500/20 rounded-xl p-8 text-center">
-              <DollarSign className="h-12 w-12 text-orange-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Massive Overhead</h3>
-              <p className="text-slate-300">Salaries, benefits, training, turnover costs, and management overhead</p>
+              <Clock className="h-12 w-12 text-orange-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Too Much Admin</h3>
+              <p className="text-slate-300">Endless emails, reports, and data entry eat up your day.</p>
+            </div>
+            <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-8 text-center">
+              <DollarSign className="h-12 w-12 text-red-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">High Costs</h3>
+              <p className="text-slate-300">Hiring extra staff drains profits.</p>
             </div>
             <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-8 text-center">
               <TrendingUp className="h-12 w-12 text-yellow-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Scaling Bottleneck</h3>
-              <p className="text-slate-300">Hiring, training, and managing teams becomes exponentially complex</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Scaling Issues</h3>
+              <p className="text-slate-300">Growth slows when processes don't scale with you.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Solutions Section */}
+      <section id="solutions" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              One AI Solution. Every Role Automated.
+              AI Automation for Every Part of Your Business
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Why hire a team when you can deploy a comprehensive AI workforce that never sleeps, 
-              never makes mistakes, and continuously improves?
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {automationCapabilities.map((capability, index) => {
-              const IconComponent = capability.icon;
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {solutions.map((solution, index) => {
+              const IconComponent = solution.icon;
               return (
                 <div 
                   key={index}
-                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300 hover:border-blue-500/30 hover:shadow-xl group"
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 hover:border-blue-500/30 hover:shadow-xl group"
                 >
-                  <div className="bg-blue-500/10 rounded-lg w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
-                    <IconComponent className="h-8 w-8 text-blue-400" />
+                  <div className="bg-blue-500/10 rounded-lg w-12 h-12 flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition-colors">
+                    <IconComponent className="h-6 w-6 text-blue-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{capability.title}</h3>
-                  <p className="text-slate-300">{capability.description}</p>
+                  <h3 className="text-lg font-semibold text-white mb-3">{solution.title}</h3>
+                  <p className="text-slate-300 text-sm">{solution.description}</p>
                 </div>
               );
             })}
@@ -243,151 +286,190 @@ function App() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section id="benefits" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                Why Choose AI Over Human Teams?
-              </h2>
-              <p className="text-xl text-slate-300 mb-8">
-                Every successful business will eventually automate their workforce. 
-                The question is: will you lead or follow?
-              </p>
-              
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
-                    <span className="text-slate-300">{benefit.text}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">ROI Calculator</h3>
-              <div className="space-y-6">
-                <div className="bg-slate-800/50 rounded-lg p-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-slate-300">Current Team Cost (Annual)</span>
-                    <span className="text-white font-semibold">$500,000</span>
-                  </div>
-                </div>
-                <div className="bg-slate-800/50 rounded-lg p-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-slate-300">AI Solution Cost (Annual)</span>
-                    <span className="text-white font-semibold">$99,000</span>
-                  </div>
-                </div>
-                <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-green-400 font-semibold">Your Annual Savings</span>
-                    <span className="text-green-400 font-bold text-xl">$401,000</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* ROI Section */}
+      <section id="roi" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Companies That Made the Switch
+              Save Time. Cut Costs. Scale Smarter.
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Don't just take our word for it. See how forward-thinking companies 
-              transformed their operations.
+              Automation pays for itself from day one.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300"
-              >
-                <div className="flex items-center space-x-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-slate-300 mb-6 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-slate-400">{testimonial.role}</div>
-                </div>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-8 text-center">
+              <div className="text-4xl font-bold text-green-400 mb-2">15+</div>
+              <div className="text-white font-semibold mb-2">Hours Saved Weekly</div>
+              <div className="text-slate-300">Retail stores save 15+ hours per week</div>
+            </div>
+            <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-8 text-center">
+              <div className="text-4xl font-bold text-blue-400 mb-2">40%</div>
+              <div className="text-white font-semibold mb-2">Cost Reduction</div>
+              <div className="text-slate-300">Agencies cut admin costs by 40%</div>
+            </div>
+            <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-8 text-center">
+              <div className="text-4xl font-bold text-purple-400 mb-2">90%</div>
+              <div className="text-white font-semibold mb-2">Fewer Errors</div>
+              <div className="text-slate-300">E-commerce brands reduce order errors by 90%</div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section id="pricing" className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Flexible Plans for Any Business
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {pricingPlans.map((plan, index) => (
+              <div 
+                key={index}
+                className={`rounded-2xl p-8 ${
+                  plan.popular 
+                    ? 'bg-gradient-to-br from-blue-500/20 to-purple-500/20 border-2 border-blue-500/30 relative' 
+                    : 'bg-slate-800/50 border border-slate-700/50'
+                } hover:shadow-xl transition-all duration-300`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-white mb-2">
+                    {plan.price}<span className="text-lg text-slate-400">{plan.period}</span>
+                  </div>
+                  <p className="text-slate-300">{plan.description}</p>
+                </div>
+
+                <div className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
+                      <span className="text-slate-300">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white'
+                    : 'border-2 border-slate-600 hover:border-slate-500 text-white hover:bg-slate-800/50'
+                }`}>
+                  Get Started
+                </button>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+              Book Your Automation Audit – $199
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Audit Offer Section */}
+      <section id="audit" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            Replace Your Team. Not Your Budget.
+            Your First Step: Automation Audit
           </h2>
           
           <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-12 mb-12">
             <div className="inline-flex items-center space-x-2 bg-blue-500/20 rounded-full px-4 py-2 mb-6">
-              <Shield className="h-4 w-4 text-blue-400" />
-              <span className="text-blue-400 text-sm font-medium">Enterprise Solution</span>
+              <PieChart className="h-4 w-4 text-blue-400" />
+              <span className="text-blue-400 text-sm font-medium">Premium Analysis</span>
             </div>
             
-            <div className="text-6xl font-bold text-white mb-4">$8,250<span className="text-2xl text-slate-400">/month</span></div>
-            <p className="text-xl text-slate-300 mb-8">Complete AI workforce replacement</p>
+            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+              For $199, our team will analyze your business, identify the top workflows to automate, 
+              and deliver a roadmap showing exactly how much time and money you can save.
+            </p>
             
-            <div className="grid md:grid-cols-2 gap-4 text-left mb-8">
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-400" />
-                <span className="text-slate-300">Unlimited automation workflows</span>
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center">
+                <Brain className="h-8 w-8 text-blue-400 mx-auto mb-3" />
+                <h4 className="font-semibold text-white mb-2">Business Analysis</h4>
+                <p className="text-slate-300 text-sm">Deep dive into your current processes</p>
               </div>
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-400" />
-                <span className="text-slate-300">24/7 support & monitoring</span>
+              <div className="text-center">
+                <Target className="h-8 w-8 text-purple-400 mx-auto mb-3" />
+                <h4 className="font-semibold text-white mb-2">Priority Roadmap</h4>
+                <p className="text-slate-300 text-sm">Ranked list of automation opportunities</p>
               </div>
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-400" />
-                <span className="text-slate-300">Custom integrations</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-400" />
-                <span className="text-slate-300">Advanced analytics & reporting</span>
+              <div className="text-center">
+                <BarChart3 className="h-8 w-8 text-green-400 mx-auto mb-3" />
+                <h4 className="font-semibold text-white mb-2">ROI Projections</h4>
+                <p className="text-slate-300 text-sm">Exact savings calculations</p>
               </div>
             </div>
 
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-12 py-4 rounded-lg font-semibold text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2 mx-auto">
-              <ArrowRight className="h-6 w-6" />
-              <span>Start Your AI Transformation</span>
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+                Book Audit Now
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+                Talk to an Expert
+              </button>
+            </div>
           </div>
-
-          <p className="text-slate-400">
-            Compare: The average mid-size team costs $500K+ annually. Our AI solution delivers superior results for 80% less.
-          </p>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Proof Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Results Across Every Industry
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {proofPoints.map((proof, index) => {
+              const IconComponent = proof.icon;
+              return (
+                <div 
+                  key={index}
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 text-center hover:bg-slate-800/70 transition-all duration-300"
+                >
+                  <div className="bg-green-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                    <IconComponent className="h-8 w-8 text-green-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{proof.industry}</h3>
+                  <p className="text-slate-300 text-lg font-medium">{proof.result}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            The Future of Work is Here
+            Let's Automate Your Business
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Stop managing people. Start scaling with AI. Join the companies already dominating 
-            their markets with automated operations.
+            Start small, grow big. Automate today and see results tomorrow.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105">
-              Schedule Demo
+              Book Your Audit
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300">
               Get Free Consultation
@@ -406,17 +488,17 @@ function App() {
                 <span className="text-2xl font-bold text-white">AutomateAI</span>
               </div>
               <p className="text-slate-400 max-w-md">
-                The complete AI workforce solution that replaces human teams with superior, 
-                24/7 automated operations.
+                AI-powered automation solutions that help businesses save time, 
+                reduce costs, and scale faster without the overhead.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-white mb-4">Solution</h3>
+              <h3 className="font-semibold text-white mb-4">Solutions</h3>
               <div className="space-y-2">
-                <a href="#" className="block text-slate-400 hover:text-white transition-colors">Support Automation</a>
-                <a href="#" className="block text-slate-400 hover:text-white transition-colors">Analytics AI</a>
-                <a href="#" className="block text-slate-400 hover:text-white transition-colors">Forecasting</a>
-                <a href="#" className="block text-slate-400 hover:text-white transition-colors">Workflow Builder</a>
+                <a href="#" className="block text-slate-400 hover:text-white transition-colors">Finance Automation</a>
+                <a href="#" className="block text-slate-400 hover:text-white transition-colors">Sales Workflows</a>
+                <a href="#" className="block text-slate-400 hover:text-white transition-colors">Customer Service</a>
+                <a href="#" className="block text-slate-400 hover:text-white transition-colors">Operations</a>
               </div>
             </div>
             <div>
@@ -430,7 +512,7 @@ function App() {
             </div>
           </div>
           <div className="border-t border-slate-800 mt-12 pt-8 text-center">
-            <p className="text-slate-400">© 2025 AutomateAI. All rights reserved. The future of work starts here.</p>
+            <p className="text-slate-400">© 2025 AutomateAI. All rights reserved. Automate smarter, scale faster.</p>
           </div>
         </div>
       </footer>
