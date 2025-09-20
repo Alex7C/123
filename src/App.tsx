@@ -385,8 +385,7 @@ function App() {
       <section id="audit" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            Your First Step: Automation Audit
-          </h2>
+Your Blueprint for Smarter Growth          </h2>
           
           <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-12 mb-12">
             <div className="inline-flex items-center space-x-2 bg-blue-500/20 rounded-full px-4 py-2 mb-6">
@@ -395,8 +394,7 @@ function App() {
             </div>
             
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              For $199, our team will analyze your business, identify the top workflows to automate, 
-              and deliver a roadmap showing exactly how much time and money you can save.
+              Kickstart your automation journey with a clear roadmap. Discover which workflows to automate first, how to unlock savings, and how to scale without extra overhead.
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 mb-8">
