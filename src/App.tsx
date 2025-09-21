@@ -186,15 +186,13 @@ function App() {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Automate Workflows.
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Empower Your Team.</span>
-            <br />
-            Scale Faster.
+            
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Your 24/7 AI Workforce</span>
+           
           </h1>
           
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Save up to 80% of your time and costs by letting AI handle repetitive work. 
-            Reduce errors, run 24/7, and grow your business without adding overhead.
+            Always on, always accurate — automation that works around the clock so you don’t have to.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
