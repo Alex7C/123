@@ -231,7 +231,7 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Stop Wasting Time on Manual Work
+              What’s Slowing Your Business Down
             </h2>
           </div>
 
@@ -239,17 +239,17 @@ function App() {
             <div className="bg-orange-500/10 border border-orange-500/20 rounded-xl p-8 text-center">
               <Clock className="h-12 w-12 text-orange-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Too Much Admin</h3>
-              <p className="text-slate-300">Endless emails, reports, and data entry eat up your day.</p>
+              <p className="text-slate-300">Repetitive tasks steal hours every week.</p>
             </div>
             <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-8 text-center">
               <DollarSign className="h-12 w-12 text-red-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">High Costs</h3>
-              <p className="text-slate-300">Hiring extra staff drains profits.</p>
+              <p className="text-slate-300">Extra hires raise expenses instead of efficiency.</p>
             </div>
             <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-8 text-center">
               <TrendingUp className="h-12 w-12 text-yellow-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Scaling Issues</h3>
-              <p className="text-slate-300">Growth slows when processes don't scale with you.</p>
+              <p className="text-slate-300">Outdated processes block sustainable growth.</p>
             </div>
           </div>
         </div>
