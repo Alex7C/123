@@ -284,7 +284,7 @@ function App() {
           </h1>
           
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Always on, always accurate — automation that works around the clock so you don’t have to.
+            Always on, always accurate — automation that works around the clock so you don't have to.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -323,7 +323,7 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              What’s Slowing Your Business Down
+              What's Slowing Your Business Down
             </h2>
           </div>
 
@@ -380,11 +380,11 @@ function App() {
                     
                     <div className="space-y-2">
                       <h4 className="text-blue-400 font-medium text-sm">Examples:</h4>
-                      <ul className="space-y-1">
+                      <ul className="space-y-2">
                         {solution.examples.map((example, exampleIndex) => (
-                          <li key={exampleIndex} className="text-slate-300 text-xs flex items-start">
-                            <span className="w-1 h-1 bg-blue-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                            {example}
+                          <li key={exampleIndex} className="text-slate-300 text-sm flex items-start">
+                            <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-1.5 mr-3 flex-shrink-0"></span>
+                            <span>{example}</span>
                           </li>
                         ))}
                       </ul>
