@@ -411,19 +411,19 @@ function App() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-8 text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">15+</div>
-              <div className="text-white font-semibold mb-2">Hours Saved Weekly</div>
-              <div className="text-slate-300">Retail stores save 15+ hours per week</div>
+              <div className="text-4xl font-bold text-green-400 mb-2">$1.1M+</div>
+              <div className="text-white font-semibold mb-2">Costs Saved</div>
+              <div className="text-slate-300">Across clients in the last 12 months.</div>
             </div>
             <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-8 text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">40%</div>
-              <div className="text-white font-semibold mb-2">Cost Reduction</div>
-              <div className="text-slate-300">Agencies cut admin costs by 40%</div>
+              <div className="text-4xl font-bold text-blue-400 mb-2">90%</div>
+              <div className="text-white font-semibold mb-2">Less Manual Work</div>
+              <div className="text-slate-300">Replaced with automated workflows.</div>
             </div>
             <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-8 text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">90%</div>
-              <div className="text-white font-semibold mb-2">Fewer Errors</div>
-              <div className="text-slate-300">E-commerce brands reduce order errors by 90%</div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">5x+</div>
+              <div className="text-white font-semibold mb-2">Faster Growth</div>
+              <div className="text-slate-300">Teams scale without extra hires and expenses.</div>
             </div>
           </div>
         </div>
