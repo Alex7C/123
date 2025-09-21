@@ -571,7 +571,7 @@ Your Blueprint for Smarter Growth          </h2>
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Let's Automate Your Business
+            Your Business Can Be Next
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Start small, grow big. Automate today and see results tomorrow.
