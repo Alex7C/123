@@ -505,24 +505,24 @@ Your Blueprint for Smarter Growth          </h2>
             </div>
             
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Kickstart your automation journey with a clear roadmap. Discover which workflows to automate first, how to unlock savings, and how to scale without extra overhead.
+              Not sure where to start? Book a free call with our team. In 20 minutes, we’ll uncover your biggest automation opportunities and show you how to scale without extra hires or expenses. After that, you can choose between a paid deep-dive audit or jump straight into building your automations.
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
                 <Brain className="h-8 w-8 text-blue-400 mx-auto mb-3" />
-                <h4 className="font-semibold text-white mb-2">Business Analysis</h4>
-                <p className="text-slate-300 text-sm">Deep dive into your current processes</p>
+                <h4 className="font-semibold text-white mb-2">Quick Discovery</h4>
+                <p className="text-slate-300 text-sm">Review your workflows with an expert processes</p>
               </div>
               <div className="text-center">
                 <Target className="h-8 w-8 text-purple-400 mx-auto mb-3" />
-                <h4 className="font-semibold text-white mb-2">Priority Roadmap</h4>
-                <p className="text-slate-300 text-sm">Ranked list of automation opportunities</p>
+                <h4 className="font-semibold text-white mb-2">Opportunity Map</h4>
+                <p className="text-slate-300 text-sm">Identify the top processes to automate</p>
               </div>
               <div className="text-center">
                 <BarChart3 className="h-8 w-8 text-green-400 mx-auto mb-3" />
-                <h4 className="font-semibold text-white mb-2">ROI Projections</h4>
-                <p className="text-slate-300 text-sm">Exact savings calculations</p>
+                <h4 className="font-semibold text-white mb-2">Clear Next Steps</h4>
+                <p className="text-slate-300 text-sm">ROI insights and automation optionss</p>
               </div>
             </div>
 
