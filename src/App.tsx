@@ -38,42 +38,134 @@ function App() {
     {
       icon: Calculator,
       title: "Finance & Accounting",
-      description: "Automate invoices, expenses, and reporting."
+      description: "Automate invoices, expense tracking, reporting, and financial forecasting.",
+      examples: [
+        "AI Expense Tracker (Telegram + Google Sheets)",
+        "Automated Invoice Processing",
+        "Stripe Revenue Predictions with AI",
+        "QuickBooks Online Automations"
+      ]
     },
     {
       icon: TrendingUp,
       title: "Sales",
-      description: "Lead scoring, outreach, and proposals."
+      description: "Turn cold outreach into warm leads with AI-powered scoring and follow-ups.",
+      examples: [
+        "LinkedIn Lead Generation & Outreach Bot",
+        "AI Proposal Generator",
+        "Automated Lead Qualification",
+        "Sales Agent with Telegram Approvals"
+      ]
     },
     {
       icon: Target,
       title: "Marketing",
-      description: "Social posts, SEO content, and ad insights."
+      description: "Scale content without scaling your team.",
+      examples: [
+        "LinkedIn Content Engine",
+        "Blog-to-Social Media Repurposing",
+        "Automated Ad Performance Analyzer",
+        "AI SEO Blog Generator"
+      ]
     },
     {
       icon: Headphones,
       title: "Customer Service",
-      description: "24/7 WhatsApp bots, ticket routing, voice support."
+      description: "Support that never sleeps.",
+      examples: [
+        "WhatsApp AI Chatbot",
+        "Gmail Auto-Responder with FAQ Lookup",
+        "Multi-Channel Telegram/Slack Support Agent",
+        "Ticket Routing + Escalation"
+      ]
     },
     {
       icon: Truck,
       title: "Logistics & Operations",
-      description: "Order syncing, delivery updates, route planning."
+      description: "Smart automation for supply chains and delivery.",
+      examples: [
+        "Order Sync & Delivery Updates Bot",
+        "Route Planning with OpenRoute API",
+        "CO₂ Emissions Tracking for Shipments",
+        "Warehouse & Inventory Sync"
+      ]
     },
     {
       icon: UserCheck,
-      title: "HR & Admin",
-      description: "CV screening, onboarding, scheduling, meeting summaries."
+      title: "HR & Talent",
+      description: "Hire and onboard faster with AI.",
+      examples: [
+        "CV Screening & Candidate Shortlisting Bot",
+        "Automated Interview Scheduling",
+        "HR Service System",
+        "Employee Onboarding Document Assistant"
+      ]
     },
     {
       icon: Scale,
       title: "Legal & Compliance",
-      description: "Contract review, compliance alerts, translations."
+      description: "Reduce risks, save time.",
+      examples: [
+        "AI Contract Review",
+        "Compliance Alert Bot",
+        "Legal Document Summarizer",
+        "AI Translation for Legal Files"
+      ]
     },
     {
       icon: Server,
       title: "IT & Infrastructure",
-      description: "Monitoring, security alerts, DevOps automation."
+      description: "Automate monitoring, security, and DevOps workflows.",
+      examples: [
+        "IT Ops SlackBot Workflow",
+        "Automated Downtime Alerts",
+        "AWS IAM Key Compromise Response",
+        "Elastic Security AI Assistant"
+      ]
+    },
+    {
+      icon: ShoppingCart,
+      title: "E-Commerce & Retail",
+      description: "Smarter shops, happier customers.",
+      examples: [
+        "Shopify Order Management Bot",
+        "AI Blog Generator for Product Listings",
+        "Abandoned Cart WhatsApp Reminder",
+        "Competitor Price Monitoring"
+      ]
+    },
+    {
+      icon: FileText,
+      title: "Content & Media",
+      description: "AI-powered creation and publishing.",
+      examples: [
+        "Podcast Generator",
+        "TikTok Video Creation Pipeline",
+        "YouTube Video Summarizer + Auto Poster",
+        "AI Avatar Video Generator"
+      ]
+    },
+    {
+      icon: BarChart3,
+      title: "Research & Analytics",
+      description: "Insights without the manual grind.",
+      examples: [
+        "AI Market Intelligence Bot",
+        "Competitor Monitoring",
+        "AI Stock Market Digest",
+        "Research Paper Scraper & Summarizer"
+      ]
+    },
+    {
+      icon: Brain,
+      title: "Admin & Productivity",
+      description: "Focus on growth, let AI handle the busywork.",
+      examples: [
+        "AI Meeting Notes & Summaries",
+        "Gmail Categorization + Draft Generator",
+        "Notion Task Manager with AI Assistant",
+        "Slack Reminders & Notifications"
+      ]
     }
   ];
 
@@ -264,19 +356,40 @@ function App() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {solutions.map((solution, index) => {
               const IconComponent = solution.icon;
               return (
                 <div 
                   key={index}
-                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 hover:border-blue-500/30 hover:shadow-xl group"
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300 hover:border-blue-500/30 hover:shadow-xl group relative overflow-hidden"
                 >
                   <div className="bg-blue-500/10 rounded-lg w-12 h-12 flex items-center justify-center mb-4 group-hover:bg-blue-500/20 transition-colors">
                     <IconComponent className="h-6 w-6 text-blue-400" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3">{solution.title}</h3>
-                  <p className="text-slate-300 text-sm">{solution.description}</p>
+                  <p className="text-slate-300 text-sm mb-4">{solution.description}</p>
+                  
+                  {/* Examples - shown on hover */}
+                  <div className="absolute inset-0 bg-slate-800/95 backdrop-blur-sm p-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                    <div className="bg-blue-500/10 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+                      <IconComponent className="h-6 w-6 text-blue-400" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-3">{solution.title}</h3>
+                    <p className="text-slate-300 text-sm mb-4">{solution.description}</p>
+                    
+                    <div className="space-y-2">
+                      <h4 className="text-blue-400 font-medium text-sm">Examples:</h4>
+                      <ul className="space-y-1">
+                        {solution.examples.map((example, exampleIndex) => (
+                          <li key={exampleIndex} className="text-slate-300 text-xs flex items-start">
+                            <span className="w-1 h-1 bg-blue-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            {example}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               );
             })}
