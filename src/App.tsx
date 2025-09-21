@@ -606,14 +606,14 @@ Your Blueprint for Smarter Growth          </h2>
             Your Business Can Be Next
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Start small, grow big. Automate today and see results tomorrow.
+            See how automation turns bottlenecks into growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105">
-              Book Your Audit
+              Book Free Call
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300">
-              Get Free Consultation
+              Explore Automations
             </button>
           </div>
         </div>
