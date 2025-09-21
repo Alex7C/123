@@ -172,18 +172,39 @@ function App() {
   const proofPoints = [
     {
       icon: ShoppingCart,
-      industry: "Retail",
-      result: "Cut order processing by 70%"
+      industry: "E-Commerce & Retail",
+      problems: "Slow order processing, manual inventory updates, abandoned carts, customer service overload, pricing errors.",
+      result: "70% faster order management, real-time stock sync, automated customer follow-ups, and 35% more sales recovered."
     },
     {
       icon: Building2,
       industry: "Agencies",
-      result: "Saved 25 hours/week on admin"
+      problems: "Endless reporting, client updates, repetitive outreach, juggling multiple tools, missed deadlines.",
+      result: "25+ hours saved weekly with automated reports, CRM sync, AI-driven prospecting, and smoother client management."
     },
     {
       icon: Utensils,
-      industry: "Restaurants",
-      result: "Reduced missed bookings by 90%"
+      industry: "Hospitality (Restaurants, Hotels, Services)",
+      problems: "Missed bookings, delayed confirmations, manual menu updates, lost customer inquiries, staff scheduling conflicts.",
+      result: "90% fewer missed reservations, instant confirmations, automated customer engagement, and easier staff coordination."
+    },
+    {
+      icon: Truck,
+      industry: "Logistics & Operations",
+      problems: "Delivery delays, lack of real-time tracking, manual route planning, rising fuel costs, high support volume.",
+      result: "Optimized routes, automated tracking notifications, cost-efficient deliveries, and fewer support tickets."
+    },
+    {
+      icon: UserCheck,
+      industry: "HR & Talent",
+      problems: "Manual CV screening, endless interview scheduling, inconsistent candidate communication, onboarding delays.",
+      result: "6x faster hiring with AI screening, automated scheduling, and smooth onboarding workflows."
+    },
+    {
+      icon: Calculator,
+      industry: "Finance & Accounting",
+      problems: "Manual invoicing, slow expense tracking, reporting delays, error-prone reconciliations, compliance risks.",
+      result: "Automated invoicing, real-time expense reports, accurate reconciliations, and compliance alerts."
     }
   ];
 
@@ -505,7 +526,7 @@ Your Blueprint for Smarter Growth          </h2>
             </div>
             
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Not sure where to start? Book a free call with our team. In 20 minutes, we’ll uncover your biggest automation opportunities and show you how to scale without extra hires or expenses. After that, you can choose between a paid deep-dive audit or jump straight into building your automations.
+              Not sure where to start? Book a free call with our team. In 20 minutes, we'll uncover your biggest automation opportunities and show you how to scale without extra hires or expenses. After that, you can choose between a paid deep-dive audit or jump straight into building your automations.
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -547,19 +568,30 @@ Your Blueprint for Smarter Growth          </h2>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {proofPoints.map((proof, index) => {
               const IconComponent = proof.icon;
               return (
                 <div 
                   key={index}
-                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 text-center hover:bg-slate-800/70 transition-all duration-300"
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300"
                 >
-                  <div className="bg-green-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                    <IconComponent className="h-8 w-8 text-green-400" />
+                  <div className="flex items-center mb-6">
+                    <div className="bg-blue-500/10 rounded-lg w-12 h-12 flex items-center justify-center mr-4">
+                      <IconComponent className="h-6 w-6 text-blue-400" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">{proof.industry}</h3>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{proof.industry}</h3>
-                  <p className="text-slate-300 text-lg font-medium">{proof.result}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-red-400 font-medium text-sm mb-2">Problems:</h4>
+                    <p className="text-slate-300 text-sm leading-relaxed">{proof.problems}</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-green-400 font-medium text-sm mb-2">Result:</h4>
+                    <p className="text-slate-300 text-sm leading-relaxed font-medium">{proof.result}</p>
+                  </div>
                 </div>
               );
             })}
