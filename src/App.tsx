@@ -402,10 +402,10 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Save Time. Cut Costs. Scale Smarter.
+              Why Teams Choose AutomationAI
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Automation pays for itself from day one.
+              Automation transforms how modern businesses work.
             </p>
           </div>
 
