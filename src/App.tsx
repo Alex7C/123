@@ -40,7 +40,7 @@ function App() {
       title: "Finance & Accounting",
       description: "Automate invoices, expense tracking, reporting, and financial forecasting.",
       examples: [
-        "AI Expense Tracker (Telegram + Google Sheets)",
+        "AI Expense Tracker",
         "Automated Invoice Processing",
         "Stripe Revenue Predictions with AI",
         "QuickBooks Online Automations"
@@ -54,7 +54,7 @@ function App() {
         "LinkedIn Lead Generation & Outreach Bot",
         "AI Proposal Generator",
         "Automated Lead Qualification",
-        "Sales Agent with Telegram Approvals"
+        "Sales Agent with Telegram Approvals + Sheets"
       ]
     },
     {
