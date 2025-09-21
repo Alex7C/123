@@ -357,7 +357,7 @@ function App() {
             <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-8 text-center">
               <DollarSign className="h-12 w-12 text-red-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">High Costs</h3>
-              <p className="text-slate-300">Extra hires raise expenses instead of efficiency.</p>
+              <p className="text-slate-300">Hidden expenses pile up from manual work, errors, and extra hires.</p>
             </div>
             <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-8 text-center">
               <TrendingUp className="h-12 w-12 text-yellow-400 mx-auto mb-4" />
