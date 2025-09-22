@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { 
-  Bot, 
   Zap, 
   Users, 
   TrendingUp, 
@@ -30,6 +29,7 @@ import {
   Building2,
   Utensils
 } from 'lucide-react';
+import { Logo } from './components/Logo';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -257,8 +257,8 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <Bot className="h-8 w-8 text-blue-400" />
-              <span className="text-xl font-bold text-white">AutomateAI</span>
+              <Logo className="h-8 w-8" />
+              <span className="text-xl font-bold text-white">YourAI</span>
             </div>
             
             <nav className="hidden md:flex space-x-8">
@@ -423,7 +423,7 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Teams Choose AutomationAI
+              Why Teams Choose YourAI
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Automation transforms how modern businesses work.
@@ -625,8 +625,8 @@ Your Blueprint for Smarter Growth          </h2>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <Bot className="h-8 w-8 text-blue-400" />
-                <span className="text-2xl font-bold text-white">AutomateAI</span>
+                <Logo className="h-8 w-8" />
+                <span className="text-2xl font-bold text-white">YourAI</span>
               </div>
               <p className="text-slate-400 max-w-md">
                 AI-powered automation solutions that help businesses save time, 
@@ -653,7 +653,7 @@ Your Blueprint for Smarter Growth          </h2>
             </div>
           </div>
           <div className="border-t border-slate-800 mt-12 pt-8 text-center">
-            <p className="text-slate-400">© 2025 AutomateAI. All rights reserved. Automate smarter, scale faster.</p>
+            <p className="text-slate-400">© 2025 YourAI. All rights reserved. Your AI, your success.</p>
           </div>
         </div>
       </footer>
